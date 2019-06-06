@@ -10,8 +10,7 @@ import br.com.vendasv2.dominio.Produto;
 
 
 @Embeddable
-public class ClienteProdutoPK implements Serializable{
-	
+public class ClienteProdutoPK implements Serializable {	
 	private static final long serialVersionUID = 1L;
 	
 	@ManyToOne

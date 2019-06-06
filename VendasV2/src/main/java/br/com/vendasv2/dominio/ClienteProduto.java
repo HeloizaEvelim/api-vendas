@@ -8,7 +8,6 @@ import javax.persistence.Table;
 import br.com.vendasv2.dominio.ClienteProdutoPK;
 
 
-
 @Entity
 @Table(name = "cliente_produto")
 public class ClienteProduto implements Serializable {
@@ -19,6 +18,7 @@ public class ClienteProduto implements Serializable {
 	
 	private Integer estoque;
 	private Integer situacao;
+	
 	public Integer getEstoque() {
 		return estoque;
 	}

@@ -3,6 +3,7 @@ package br.com.vendasv2.resources;
 import java.net.URI;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,10 +20,11 @@ import br.com.vendasv2.services.FornecedorService;
 @RestController
 @RequestMapping(value = "/fornecedores")
 public class FornecedorResource {
-
+	
+	@Autowired
 	private FornecedorService fornecedorService;
 	
-	@RequestMapping(value = "/{codigo}", method = RequestMethod.GET)
+	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public ResponseEntity<?> buscarPorId(@PathVariable Integer id) {
 		Fornecedor fornecedor = fornecedorService.buscarPorId(id);
 		return ResponseEntity.ok().body(fornecedor);

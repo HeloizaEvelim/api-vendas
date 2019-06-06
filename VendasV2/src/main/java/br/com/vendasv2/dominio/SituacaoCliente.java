@@ -19,6 +19,14 @@ public enum SituacaoCliente {
 		return codigo;
 	}
 
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
 	public String getDescricao() {
 		return descricao;
 	}
